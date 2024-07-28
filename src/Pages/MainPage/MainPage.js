@@ -25,11 +25,11 @@ function MainPage() {
 
             <PostListContainer>
                 {
-                    postDataList != undefined ?
+                    postDataList !== undefined ?
                     postDataList.map(
                         (postData, index) => (<PostCard key={index} postData={postData}/>)
                         )
-                        : ""
+                        : "[관리자에게 문의하세요.]"
                 }
             </PostListContainer>
             <WritingButton to="/write">글 쓰러 가기</WritingButton>
