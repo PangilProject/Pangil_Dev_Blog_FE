@@ -14,7 +14,7 @@ export const getPostData = async () => {
 // 데이터 추가 함수
 export const postPostData = async (newPost) => {
     try {
-        const response = await axios.post(`${process.env.REACT_APP_URL}`, newPost);
+        await axios.post(`${process.env.REACT_APP_URL}`, newPost);
         console.log("[success] postPostData()");
     } catch (error) {
         console.log("[post error] postPostData()");

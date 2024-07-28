@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const PostCard = (e) => {
-    const [sendPostData, setSendPostData] = useState(e.postData || {
+    const [sendPostData, ] = useState(e.postData || {
         title: "",
         content: ""
     });

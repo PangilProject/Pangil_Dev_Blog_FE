@@ -8,7 +8,6 @@ import {PageTitleBox} from "../../Layout/PageTitle";
 
 function MainPage() {
     const [postDataList, setPostDataList] = useState([]);
-    const [newPost, setNewPost] = useState({title: '', content: ''});
 
     useEffect(() => {
         const getData = async () => {

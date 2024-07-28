@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {postPostData} from "../../API/postAPI";
 import {useNavigate} from "react-router-dom";
-import {Container100Per, PageContainer} from "../../Layout/Common";
+import {PageContainer} from "../../Layout/Common";
 import {PageTitleBox} from "../../Layout/PageTitle";
 import styled from "styled-components";
 

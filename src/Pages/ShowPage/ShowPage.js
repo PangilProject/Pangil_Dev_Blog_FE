@@ -17,7 +17,7 @@ function ShowPage() {
             setPostData(response);
         }
         getData();
-    }, []);
+    }, [id]); // id를 의존성 배열에 추가
 
     return (
         <PageContainer>
