@@ -21,7 +21,7 @@ function WritePage() {
     const handlePostData = async () => {
         try {
             if (window.confirm("추가하시겠습니까?")) {
-                const response = await postPostData(newPost);
+                await postPostData(newPost);
                 alert("데이터 추가 완료");
                 navigate("/");
             }
