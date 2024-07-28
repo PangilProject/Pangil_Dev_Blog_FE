@@ -25,9 +25,11 @@ function MainPage() {
 
             <PostListContainer>
                 {
+                    postDataList != undefined ?
                     postDataList.map(
                         (postData, index) => (<PostCard key={index} postData={postData}/>)
-                    )
+                        )
+                        : ""
                 }
             </PostListContainer>
             <WritingButton to="/write">글 쓰러 가기</WritingButton>
