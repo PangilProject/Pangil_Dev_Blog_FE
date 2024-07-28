@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import Router from './Router';
+import {ThemeProvider} from 'styled-components';
+import { theme } from './Theme';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Router/>
-    </BrowserRouter>
-  );
+    return (
+        <ThemeProvider theme = {theme}>
+            <BrowserRouter>
+                <Router/>
+            </BrowserRouter>
+        </ThemeProvider>
+    );
 }
 
 export default App;
