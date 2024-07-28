@@ -5,7 +5,6 @@ import ShowPage from "../src/Pages/ShowPage/ShowPage";
 import WritePage from "../src/Pages/WritePage/WritePage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import Layout from "./Layout/Layout";
-import NotFoundPage from "./Pages/NotFoundPage";
 
 function Router() {
 
@@ -18,7 +17,7 @@ function Router() {
                 <Route path="/write" element={<WritePage />}/>
                 <Route path="/login" element={<LoginPage/>}/>
             </Route>
-            <Route path="*" element={<NotFoundPage />}/>
+            {/* <Route path="*" element={<NotFoundPage />}/> */}
 
         </Routes>
     );
