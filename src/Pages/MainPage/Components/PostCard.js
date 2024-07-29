@@ -68,8 +68,8 @@ const RowBox = styled.div `
 
     font-size: 15px;
 
-    margin-top: 5px;
-
+    margin-top: 15px;
+    margin-bottom: 10px;
 `
 const PostDate = styled.div `
 
