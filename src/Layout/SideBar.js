@@ -19,12 +19,13 @@ function SideBar() {
         <SideBarContainer>
             <ProfileWrapper>
                 <ProfileImage src="/Img/ProfileImage.jpg"/>
-                <ProfileBlogName>팡일 개발블로그</ProfileBlogName>
+                <ProfileBlogName to = "/" onClick={(e) => handleLinkClick(e, "/")}>팡일 개발블로그</ProfileBlogName>
                 <ProfileBlogUser>Pangil</ProfileBlogUser>
             </ProfileWrapper>
             <MenuList>
                 <MenuItem to="/" onClick={(e) => handleLinkClick(e, "/")}>Home</MenuItem>
                 <MenuItem to="/category" onClick={(e) => handleLinkClick(e, "/category")}>Category</MenuItem>
+                <MenuItem to = "/write" onClick={(e) => handleLinkClick(e, "/write")}>글 쓰러 가기</MenuItem>
             </MenuList>
 
         </SideBarContainer>
@@ -83,10 +84,12 @@ const ProfileImage = styled.img `
     margin-bottom: 5px;
 `;
 
-const ProfileBlogName = styled.p `
+const ProfileBlogName = styled(Link)`
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 5px;
+
+    text-decoration: none;
     color : ${props => props.theme.colors.one};
 `;
 
@@ -119,7 +122,7 @@ const MenuItem = styled(Link)`
     font-size: 17px;
     font-weight: bold;
 
-    transition: color 1s ease; /* color 속성에 애니메이션 추가 */
+    transition: color 0.5s ease; /* color 속성에 애니메이션 추가 */
 
     &:hover {
         color: orange; /* hover 상태에서의 색상 */
