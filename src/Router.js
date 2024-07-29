@@ -5,6 +5,7 @@ import ShowPage from "../src/Pages/ShowPage/ShowPage";
 import WritePage from "../src/Pages/WritePage/WritePage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import Layout from "./Layout/Layout";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 function Router() {
 
@@ -16,8 +17,8 @@ function Router() {
                 <Route path="/show/:id" element={<ShowPage />}/> {/* 동적 경로 */}
                 <Route path="/write" element={<WritePage />}/>
                 <Route path="/login" element={<LoginPage/>}/>
+                <Route path="*" element={<NotFoundPage />}/>
             </Route>
-            {/* <Route path="*" element={<NotFoundPage />}/> */}
 
         </Routes>
     );
