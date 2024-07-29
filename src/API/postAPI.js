@@ -32,3 +32,13 @@ export const getPostDataOne = async (id) => {
         console.log("[get error] getPostDataOne()");
     }
 };
+
+export const deletePostData = async (id) => {
+    try {
+        const response = await axios.delete(`http://172.20.10.2:8080/posts/${id}`);
+        console.log("[success] deletePostDataOne()");
+        return response.data;
+    } catch (error) {
+        console.log("[get error] deletePostDataOne()");
+    }
+}
