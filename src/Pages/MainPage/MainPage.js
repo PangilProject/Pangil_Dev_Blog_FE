@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import {getPostData} from "../../API/postAPI";
-import {Link} from "react-router-dom";
 import styled from "styled-components";
 import PostCard from "./Components/PostCard";
 import {PageContainer} from "../../Layout/Common";
@@ -32,14 +31,13 @@ function MainPage() {
                         : "[관리자에게 문의하세요.]"
                 }
             </PostListContainer>
-            <WritingButton to="/write">글 쓰러 가기</WritingButton>
         </PageContainer>
     );
 }
 
 export const PostListContainer = styled.div `
     width: 1000px;
-    height : 2000px;
+    height : auto;
     /* background-color: ${props => props.theme.colors.five}; */
 
     display: flex;
@@ -51,11 +49,8 @@ export const PostListContainer = styled.div `
         box-sizing: border-box;
         
     }
-`;
 
-const WritingButton = styled(Link)`
-    width: 300px;
-    color : white;
+    padding-bottom: 50px;
 `;
 
 export default MainPage;
