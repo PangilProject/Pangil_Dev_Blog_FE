@@ -1,23 +1,35 @@
 import React from 'react';
-import { PageContainer } from '../Layout/Common';
+import {PageContainer} from '../Layout/Common';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function NotFoundPage() {
     return (
         <NotFoundPageContainer>
-            <h1>404 Not Found</h1>
-            <p>죄송합니다, 요청한 페이지를 찾을 수 없습니다.</p>
-            <BackHome to = "/">Home으로 돌아가기</BackHome>
+            <ErrorInfoContainer>
+                <h1>404 Not Found</h1>
+                <p>죄송합니다, 요청한 페이지를 찾을 수 없습니다.</p>
+
+            </ErrorInfoContainer>
+            <BackHome to="/">Home으로 돌아가기</BackHome>
         </NotFoundPageContainer>
     );
 }
 const NotFoundPageContainer = styled(PageContainer)`
     height: 100vh;
-    padding-top: 100px;
 `;
 
-const BackHome = styled(Link)`
+const ErrorInfoContainer = styled.div`
+    width: 100%;
+    height : 250px;
+    background-color: ${props => props.theme.colors.two};
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    `;
+export const BackHome = styled(Link)`
 
     margin-top : 40px;
     font-size: 20px;
