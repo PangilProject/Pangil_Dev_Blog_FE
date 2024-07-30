@@ -35,7 +35,7 @@ export const getPostDataOne = async (id) => {
 
 export const deletePostData = async (id) => {
     try {
-        const response = await axios.delete(`http://172.20.10.2:8080/posts/${id}`);
+        const response = await axios.delete(`${process.env.REACT_APP_URL}/${id}`);
         console.log("[success] deletePostDataOne()");
         return response.data;
     } catch (error) {
