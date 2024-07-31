@@ -103,6 +103,7 @@ const AddButton = styled.button `
     font-weight: bold;
     border-radius: 5px;
     border : none;
+    color : black;
 
     &:hover{
         background-color: ${props => props.theme.colors.one};;

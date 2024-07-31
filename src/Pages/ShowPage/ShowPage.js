@@ -82,11 +82,13 @@ const DeleteButton = styled.button `
     border: none;
     transition: color 1s ease, background-color 1s ease; /* color 속성에 애니메이션 추가 */
     border-radius: 5px;
+    color : black;
 
     &:hover {
         background-color: black;
         color: white;
     }
+    margin-top: 50px;
 `;
 
 const BackHome = styled(Link)`
