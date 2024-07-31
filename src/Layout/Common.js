@@ -9,7 +9,7 @@ export const Container100Per = styled.div `
 export const PageContainer = styled(Container100Per)`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;;
 `;
 
 export const SideBarwidth = '250px';

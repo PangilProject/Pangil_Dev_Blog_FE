@@ -38,6 +38,7 @@ function MainPage() {
 export const PostListContainer = styled.div `
     width: 1000px;
     height : auto;
+    min-height: calc(100vh - 250px);
     /* background-color: ${props => props.theme.colors.five}; */
 
     display: flex;
@@ -47,10 +48,9 @@ export const PostListContainer = styled.div `
         width: 100%;
         padding : 0% 10%;
         box-sizing: border-box;
+        padding-bottom: 50px;
         
-    }
-
-    padding-bottom: 50px;
+    }  
 `;
 
 export default MainPage;

@@ -29,8 +29,13 @@ const PostCardContainer = styled.div `
     color : ${props => props.theme.colors.one};
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     border-bottom : 2px solid ${props => props.theme.colors.one};
+    margin-top : 60px;
+
+    &:last-child{
+        border: none;
+    }
 
 `;
 
@@ -39,7 +44,6 @@ const PostTitle = styled(Link) `
     font-size: 25px;
     font-weight: 600;
 
-    margin-top: 15px;
     color : ${props => props.theme.colors.one};
     text-decoration: none;
 
